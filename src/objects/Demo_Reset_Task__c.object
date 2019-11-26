@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Demo_Reset_Task_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Demo_Reset_Task_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Demo_Reset_Task_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <label>Demo Reset Task Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>A specification for the deletion of an object&apos;s records as part of a demo reset.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Checked if this item should be included in the list of tasks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if this item should be included in the list of tasks.</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>A description of the demo reset item, for example, &quot;Delete all records that are not custom-crafted for the demo scenario&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of the demo reset item, for example, &quot;Delete all records that are not custom-crafted for the demo scenario&quot;.</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object_API_Name__c</fullName>
+        <description>API Name of the object whose records are to be deleted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API Name of the object whose records are to be deleted.</inlineHelpText>
+        <label>Object API Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SOQL_WHERE_Clause__c</fullName>
+        <description>A SOQL WHERE clause expression (without the &quot;WHERE&quot;) that evaluates to &quot;true&quot; if a record should be deleted, for example, &quot;Hand_Crafted_for_Demo_Scenario__c = false&quot;. Leave blank if all records of this object are to be deleted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A SOQL WHERE clause expression (without the &quot;WHERE&quot;) that evaluates to &quot;true&quot; if a record should be deleted, for example, &quot;Hand_Crafted_for_Demo_Scenario__c = false&quot;. Leave blank if all records of this object are to be deleted.</inlineHelpText>
+        <label>SOQL WHERE Clause</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Demo Reset Task</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Active__c</columns>
+        <columns>Description__c</columns>
+        <columns>Object_API_Name__c</columns>
+        <columns>SOQL_WHERE_Clause__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DRT-{000}</displayFormat>
+        <label>Demo Reset Task ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Demo Reset Tasks</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
