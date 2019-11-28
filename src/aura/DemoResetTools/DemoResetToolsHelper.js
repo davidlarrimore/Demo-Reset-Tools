@@ -10,7 +10,7 @@
                             component.find("notifLib").showToast({
                                 mode: "sticky",
                                 variant: "error",
-                                message: "A query error was encountered on the \"{0}\" demo reset item. Check the object API name and WHERE clause expression.",
+                                message: "A query error was encountered on the \"{0}\" demo reset task. Check the object API name and WHERE clause expression.",
                                 messageData: [ { url: item.itemLink, label: item.itemDescription } ]
                             });
                         }
