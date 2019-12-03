@@ -69,7 +69,7 @@ public without sharing class DemoResetTools {
                 toasts.add(toast);
             } else
                 for (Demo_Reset_Task__c item : demoResetTasks)
-                toasts.add(deleteRecords(item.Object_API_Name__c, item.SOQL_WHERE_Clause__c));
+                    toasts.add(deleteRecords(item.Object_API_Name__c, item.SOQL_WHERE_Clause__c));
         }
         if (runApex)
             toasts.addAll(DemoResetCustomApex.runCustomApex());

@@ -18,7 +18,9 @@
     handleCancelButton : function (component, event, helper) {
         component.set("v.modalOpen", false);
         component.find("notifLib").showToast({
-            message: "No records were deleted" + (component.get("v.runApex") ? " and the custom Apex method was not executed." : ".")
+            message: "No records were deleted" + (component.get("v.runApex") ? " and the custom Apex method was not executed." : "."),
+            variant: "info",
+            mode: "dismissable"
         });        
     },
     
@@ -41,12 +43,15 @@
                     helper.refreshTaskItems(component, event, helper);
                     component.set("v.selectedRows", []);
                     component.set("v.totalRecordsSelected", 0);
-                    for (const toast of response.getReturnValue())
-                        component.find("notifLib").showToast({
-                            mode: toast.toastMode,
-                            variant: toast.toastVariant,
-                            message: toast.toastMessage
-                        });
+                    let returnValue = response.getReturnValue();
+                    if (returnValue != null)
+                    	for (const toast of returnValue)
+                        	component.find("notifLib").showToast({
+                            	mode: toast.toastMode,
+                            	variant: toast.toastVariant,
+                            	message: toast.toastMessage
+                        	});
+                    $A.get('e.force:refreshView').fire();
                     break;
             }
         });
