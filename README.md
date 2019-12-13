@@ -14,7 +14,7 @@ I was inspired by Salesforce uber-SE John Schillaci to create this Lightning com
 
 Once the package is deployed, you will need to create a Lightning app page with the Lightning App Builder and drag the `Reset the Demo` custom component on the page where you would like to place it. Since you will have no demo reset tasks defined at this point, your component will look like this:
 
-![Blank Demo Reset Tools](/images/Blank_Demo_Reset.gif)
+![Blank Demo Reset Tools](/images/Blank_Demo_Reset.png)
 
 Next, open the App Launcher and click on the `Demo Reset Tasks` tab and click the `New` button and supply the object API name, a description, and an optional SOQL WHERE clause which specifies which records of that object should be deleted. Repeat for all of the objects whose records you would like to delete.
 
